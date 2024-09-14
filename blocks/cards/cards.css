@@ -1,27 +1,209 @@
-.cards > ul {
-  list-style: none;
+.cards {
+  display: flex;
+}
+
+.cards-wrapper-0 {
+  flex-basis: 50%;
+}
+
+.cards-wrapper {
+  margin-top: 30px;
+}
+
+.cards-wrapper-0 div h4 {
   margin: 0;
+  font-size: 48px;
+  color: white;
+  line-height: 45px;
+}
+
+.cards-wrapper-0 div p {
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px
+}
+
+/* General styling for the ul */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  margin: 0;
+  gap: 20px;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+/* Styling for each card container */
+.card-container {
+  flex-basis: 40%;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  display: flex;
+  gap: 20px;
+  border-radius: 6px;
+  box-shadow: rgb(255 255 255 / 35%) 0px 0px 0px 4px;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.cards-wrapper-1 {
+  box-shadow: rgb(255 255 255 / 35%) 0px 0px 0px 4px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  display: flex;
+  min-width: 543px;
+  border-radius: 6px;
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+/* Picture and image styling */
+picture {
+  display: flex;
+  /* margin: 0 auto; */
+  justify-content: center;
+  align-items: center;
 }
 
-.cards > ul > li img {
+main img {
+  max-width: 100%;
+  height: auto;
+  width: 100px;
+}
+
+/* Paragraph styling */
+p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Specific styling for the title of the card */
+.card-container p:first-of-type {
+  font-weight: bold;
+  font-size: 15px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Styling for card description */
+.card-container p:last-of-type {
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom:0
+}
+
+#i-want-to-track strong {
+  color: #FFC303;
+}
+
+li.card-container::after {
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 7px;
+    border-right: 0.2em solid black;
+    border-top: 0.2em solid black;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+    top: 40%;
+}
+
+.title-cell {
+  display: none;
+}
+
+.tracking-input {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  position: relative;
+  padding: 10px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-button {
+  background-color: transparent;
+  color: black;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: relative;
+}
+
+.tab-button:hover,  .tab-button:focus{
+  background-color: transparent;
+}
+
+.tab-button.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-bottom: 4px solid #FFC303;
+  border-radius: 0;
+  width: 94px;
+  height: 10px;
+}
+
+.track-package-btn {
+  background-color: #FFC303;
+  color: black;
+}
+
+.track-package-btn::after {
+  position: relative;
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-right: 0.2em solid black;
+  border-top: 0.2em solid black;
+  transform: rotate(45deg);
+  margin-left: 0.5em;
+  top: 40%;
+}
+
+.track-package-btn:hover,  .track-package-btn:focus{
+  background-color: #FFC303;
+  color: black;
+}
+
+.help-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+/* .search-icon {
+  height: 30px;
+  width: 30px;
+  display: block;
+  position: relative;
+}
+.search-icon::before {
+  content: "\1F50D";
+  font-size: 16px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+} */
+.track-section {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.track-section tr:not(:first-child) {
+  border: 1px solid grey;
 }

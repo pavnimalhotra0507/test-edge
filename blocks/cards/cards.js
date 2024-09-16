@@ -107,7 +107,7 @@ function createRightSection(rightSec) {
       heading.textContent = row.cells[0].textContent;
       row.replaceChild(heading, row.querySelector('td'))
     } else {
-      row.classList.add('card-container')
+      row.classList.add('card-container-track')
     }
   })
 }
